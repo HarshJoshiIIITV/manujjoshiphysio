@@ -31,10 +31,12 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <div className={`${poppins.variable} ${montserrat.variable}`}>
-      <Header />
-      <main>{children}</main>
-      <CallPopIcon/>
-    </div>
+    <html lang="en"> {/* ✅ FIXED: adds language attribute */}
+      <body className={`${poppins.variable} ${montserrat.variable}`}>
+        <Header />
+        <main>{children}</main>
+        <CallPopIcon />
+      </body>
+    </html>
   );
 }
