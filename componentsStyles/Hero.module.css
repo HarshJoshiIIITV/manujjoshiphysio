@@ -1,0 +1,36 @@
+
+.btn {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #1E3A8A;
+  max-width: fit-content;
+  text-decoration: none;
+  color: #f9fafb;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+
+.hero {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  overflow: hidden;
+  color: #f9fafb;
+  text-align: center;
+}
+
+/* Gradient overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  z-index: -1;
+}

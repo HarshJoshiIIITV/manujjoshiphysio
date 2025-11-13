@@ -1,0 +1,57 @@
+.contact{
+  padding: 3rem;
+}
+
+.contact h3{
+    margin-bottom: 0rem;
+}
+
+.contactButton a{
+    padding: 1rem;
+    border-radius: 8px;
+    background: #455A64;
+      color: #F9FAFB;
+      text-decoration: none;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.contactButton{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.icon{
+    display: inline;
+    margin-right: 0.6rem;
+}
+
+.contactForms{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.contactForms iframe{
+     width: 35vw;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 1280px) {
+  .contactForms iframe{
+     width: 90vw;
+}
+}
+
+
+@media (max-width: 500px) {
+  .contact{
+    padding: 1rem; 
+  }
+}
+

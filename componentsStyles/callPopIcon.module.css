@@ -1,0 +1,8 @@
+.popIcon{
+    position: fixed;
+    right: 25px;
+    bottom: 50px;
+}
+.popIcon a{
+    text-decoration: none;
+}

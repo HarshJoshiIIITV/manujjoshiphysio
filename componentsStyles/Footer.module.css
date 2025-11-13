@@ -1,0 +1,29 @@
+
+
+
+.footer{
+  padding: 3rem 3rem 1rem 3rem;
+
+}
+
+.mediaIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.icon{
+    padding: 1rem;
+}
+
+.copyright{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 4rem;
+}
+
+@media (max-width: 500px) {
+  .footer{
+    padding: 1rem; 
+  }
+}

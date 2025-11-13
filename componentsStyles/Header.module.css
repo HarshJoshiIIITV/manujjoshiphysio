@@ -1,0 +1,24 @@
+.header {
+ text-align: center;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: white;
+  padding: 0.6rem;
+}
+.brand{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.brandpos{
+  margin-top: 0.4rem;
+}
+
+
+@media (max-width: 500px) {
+  .header{
+    padding: 6px; 
+  }
+}

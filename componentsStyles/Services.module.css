@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.card img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card h4 {
+  margin-top: 0.75rem;
+}
+
+.services{
+    padding: 3rem;
+}
+
+
+@media (max-width: 500px) {
+  .services{
+    padding: 1rem; 
+  }
+}
