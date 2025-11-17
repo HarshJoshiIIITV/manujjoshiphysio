@@ -1,17 +1,14 @@
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .card {
   border-radius: 1rem;
   padding: 1rem;
   text-align: center;
-}
-.card img {
-  object-fit: cover;
-  border-radius: 50%;
 }
 .card h4 {
   margin-top: 0.75rem;

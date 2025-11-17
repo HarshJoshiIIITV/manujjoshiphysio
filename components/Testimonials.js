@@ -1,9 +1,8 @@
-"use client";
-import useEmblaCarousel from "embla-carousel-react";
 import styles from "../componentsStyles/testimonials.module.css";
-import { useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Courousel from "./Corousel";
+
 const items = [
   {
     text: "I had back problems for the past one year and I took different treatments 2-3 time...",
@@ -37,59 +36,33 @@ const items = [
   },
 ];
 
+const Card = ({ it }) => {
+  return (
+    <>
+      <Image
+        src={it.photo}
+        alt={it.name}
+        loading="lazy"
+        width={0}
+        height={0}
+        sizes="100%"
+        style={{ width: "100%", height: "300px", objectFit: "cover",borderRadius:'50%' }}
+      />
+
+      <h5>{it.text}<Link href={it.link} target="_blank" rel="noopener noreferrer">
+        Read full review
+      </Link></h5> 
+      <p>{it.name}</p>
+    </>
+  );
+};
+
 export default function Testimonials() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-
-  const scrollPrev = useCallback(
-    () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
-  );
-  const scrollNext = useCallback(
-    () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
-  );
-
   return (
     <section className={styles.testimonials}>
       <h2>OUR PATIENTS SPEAK FOR US</h2>
       <hr />
-
-      <div className={styles.embla}>
-        <div className={styles.emblaViewport} ref={emblaRef}>
-          <div className={styles.emblaContainer}>
-            {items.map((it, i) => (
-              <div className={styles.emblaSlide} key={i}>
-                <div className={styles.testimonialCard}>
-              
-                  <Image src={it.photo}
-                    alt={it.name}
-                    height={150}
-                    loading="lazy"
-                
-                    width={150}/>
-
-                  <h4>{it.text}</h4>
-                  <Link
-                    href={it.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Read full review
-                  </Link>
-                  <p>{it.name}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <button className={styles.prevBtn} onClick={scrollPrev}>
-          ‹
-        </button>
-        <button className={styles.nextBtn} onClick={scrollNext}>
-          ›
-        </button>
-      </div>
+      <Courousel items={items} Card={Card} />
     </section>
   );
 }

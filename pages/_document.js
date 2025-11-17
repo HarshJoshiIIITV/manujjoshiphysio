@@ -23,6 +23,11 @@ export default function Document() {
         <meta name="twitter:image" content="https://manujjoshiphysio.com" />
 
         <link rel="icon" href="/favicon.ico" />
+           {/* PNG fallback */}
+        <link rel="icon" type="image/png" href="/icon.png" sizes="512x512" />
+
+        {/* Apple devices */}
+        <link rel="apple-touch-icon" href="/icon.png" />
 
         {/* Structured Data for SEO */}
         <script

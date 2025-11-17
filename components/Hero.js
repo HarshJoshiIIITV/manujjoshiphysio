@@ -1,18 +1,10 @@
-"use client"
-import { useState,useEffect } from "react";
+
 import styles from "../componentsStyles/Hero.module.css";
 import Image from "next/image";
 import Link from "next/link";
-
+import useMobile from "./useMobile";
 export default function HeroSection() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 500);
-    handleResize(); // check immediately
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const {isMobile}=useMobile();
 
   return (
     <section className={styles.hero}>

@@ -6,27 +6,16 @@
     margin-bottom: 0rem;
 }
 
-.contactButton a{
-    padding: 1rem;
-    border-radius: 8px;
-    background: #455A64;
-      color: #F9FAFB;
-      text-decoration: none;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    display: flex;
-    align-items: center;
-}
 
-.contactButton{
+
+.doctorImage{
     margin-top: 3rem;
     margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
-.icon{
-    display: inline;
-    margin-right: 0.6rem;
-}
 
 .contactForms{
     display: flex;
@@ -34,6 +23,11 @@
     gap: 3rem;
     justify-content: center;
 }
+
+.contactForms a{
+    color:#1E3A8A
+}
+
 
 .contactForms iframe{
      width: 35vw;

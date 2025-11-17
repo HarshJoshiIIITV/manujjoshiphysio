@@ -5,7 +5,7 @@ export default function CallPopIcon(){
     return(
         <aside className={styles.popIcon}>
              <Link
-                href="https://wa.me/918619360651"
+                href="tel:+918619360651"
                 target="_blank"
                 rel="noreferrer"
                 className="btn"
